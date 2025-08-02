@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlueMark Documents Clearing Services LLC</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Three Dots Menu -->
+    <div class="menu-dots" onclick="toggleSideMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <!-- Side Menu -->
+    <div id="sideMenu" class="side-menu">
+        <div class="side-menu-content">
+            <button class="close-btn" onclick="toggleSideMenu()">&times;</button>
+            <div class="menu-item" onclick="makeCall()">
+                <span class="icon">📞</span>
+                <span>Call Us</span>
+            </div>
+            <div class="menu-item" onclick="openLocation()">
+                <span class="icon">📍</span>
+                <span>Location</span>
+            </div>
+            <div class="menu-item" onclick="openWhatsApp()">
+                <span class="icon">💬</span>
+                <span>WhatsApp</span>
+            </div>
+            <div class="menu-item" onclick="showServices()">
+                <span class="icon">🏢</span>
+                <span>Our Services</span>
+            </div>
+      
+            <div class="menu-item" onclick="showBlogSection(); toggleSideMenu();">
+                <span class="icon">📝</span>
+                <span>Blog</span>
+            </div>
+            <div class="menu-item" onclick="showAbout()">
+                <span class="icon">ℹ️</span>
+                <span>About Us</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+               <div class="logo-icon">
+        <!-- <div class="logo-icon">🏢</div> -->
+        <img src="assets/bluemark_logo.jpg" alt="BlueMark Logo" class="logo-img" />
+    </div>
+                <div class="logo-text">
+                    <h1>BlueMark</h1>
+                    <p>Documents Clearing Services LLC</p>
+                </div>
+            </div>
+            <nav class="nav">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#" class="nav-link" onclick="showDetailedServices()" onmouseover="showServicesDropdown()" onmouseout="hideServicesDropdown()">Services</a>
+                <a href="#blog" class="nav-link" onclick="showBlogSection(); return false;" style="cursor: pointer;">📝 Blog</a>
+                <a href="#about" class="nav-link">About Us</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Services Dropdown -->
+    <div id="servicesDropdown" class="services-dropdown" onmouseover="showServicesDropdown()" onmouseout="hideServicesDropdown()">
+        <div class="dropdown-content">
+            <a href="#" onclick="openServiceForm('bluemark-services')">Bluemark Services</a>
+            <a href="#" onclick="openServiceForm('golden-visa')">Golden Visa</a>
+            <a href="#" onclick="openServiceForm('tourist-visa')">Tourist Visa</a>
+            <a href="#" onclick="openServiceForm('business-setup')">Business Setup</a>
+            <a href="#" onclick="openServiceForm('medical')">Medical</a>
+            <a href="#" onclick="openServiceForm('amer-services')">Amer Services</a>
+            <a href="#" onclick="openServiceForm('tasheel-services')">Tasheel Services</a>
+            <a href="#" onclick="openServiceForm('ded-services')">DED Services</a>
+            <a href="#" onclick="openServiceForm('uae-visas')">UAE Visas</a>
+            <a href="#" onclick="openServiceForm('worldwide-visas')">Worldwide Visas</a>
+            <a href="#contact" onclick="">Contact</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h3>BlueMark UAE Documents Clearing Services</h3>
+                <p>UAE Business, Visa, PRO and Government Paperwork Solutions.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="openEasyApply()">Easy Apply</button>
+                    <button class="btn btn-secondary" onclick="showDetailedServices()">Services</button>
+                    <button class="btn btn-secondary" onclick="showBlogSection()">📝 Blog</button>
+                </div>
+                <div class="location-btn" onclick="openLocation()">
+                    <span class="icon">📍</span>
+                    <span>Find Our Location</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Most Used Services -->
+    <section class="most-used-services">
+        <div class="container">
+            <h3>Services Overview</h3>
+            <div class="services-grid">
+                <div class="service-card" onclick="openServiceForm('entry-permit')">
+                    <div class="service-icon">📋</div>
+                    <h4>Entry Permit</h4>
+                </div>
+                <div class="service-card" onclick="openServiceForm('new-visa')">
+                    <div class="service-icon">🆕</div>
+                    <h4>New Visa</h4>
+                </div>
+                <div class="service-card" onclick="openServiceForm('emirates-id')">
+                    <div class="service-icon">🆔</div>
+                    <h4>Emirates ID</h4>
+                </div>
+                <div class="service-card" onclick="openServiceForm('visa-renewal')">
+                    <div class="service-icon">🔄</div>
+                    <h4>Visa Renewal</h4>
+                </div>
+                <div class="service-card" onclick="openServiceForm('new-emirates')">
+                    <div class="service-icon">🆔</div>
+                    <h4>New Emirates</h4>
+                </div>
+                <div class="service-card" onclick="openServiceForm('status-change')">
+                    <div class="service-icon">📝</div>
+                    <h4>Status Change</h4>
+                </div>
+                <div class="service-card" onclick="openServiceForm('visa-stamping')">
+                    <div class="service-icon">🏷️</div>
+                    <h4>Visa Stamping</h4>
+                </div>
+                <div class="service-card" onclick="openServiceForm('establishment-card')">
+                    <div class="service-icon">🏢</div>
+                    <h4>Establishment Card</h4>
+                </div>
+                <div class="service-card" onclick="openServiceForm('work-permit')">
+                    <div class="service-icon">💼</div>
+                    <h4>Work Permit</h4>
+                </div>
+                <div class="service-card" onclick="openServiceForm('amer-services')">
+                    <div class="service-icon">🏛️</div>
+                    <h4>Amer Services</h4>
+                </div>
+                <div class="service-card" onclick="openServiceForm('tasheel-services')">
+                    <div class="service-icon">⚡</div>
+                    <h4>Tasheel Services</h4>
+                </div>
+                <div class="service-card" onclick="openServiceForm('ded-services')">
+                    <div class="service-icon">🏢</div>
+                    <h4>DED Services</h4>
+                </div>
+                <div class="service-card" onclick="openServiceForm('uae-visas')">
+                    <div class="service-icon">🇦🇪</div>
+                    <h4>UAE Visas</h4>
+                </div>
+                <div class="service-card" onclick="openServiceForm('worldwide-visas')">
+                    <div class="service-icon">🌍</div>
+                    <h4>Worldwide Visas</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Services (Hidden by default) -->
+    <section id="services" class="services-section" style="display: none;">
+        <div class="container">
+            <h3>Our Detailed Services</h3>
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <button class="btn btn-secondary" onclick="hideDetailedServices()">← Back to Main Services</button>
+            </div>
+            
+            <!-- Service Categories Navigation -->
+            <div class="service-categories">
+                <button class="category-btn active" onclick="showServiceCategory('entry-permits')">Entry Permits</button>
+                <button class="category-btn" onclick="showServiceCategory('residency-services')">Residency Services</button>
+                <button class="category-btn" onclick="showServiceCategory('emirates-id')">Emirates ID</button>
+                <button class="category-btn" onclick="showServiceCategory('medical')">Medical Examination</button>
+                <button class="category-btn" onclick="showServiceCategory('establishments')">Establishments</button>
+            </div>
+
+            <!-- Entry Permits -->
+            <div id="entry-permits" class="service-category active">
+                <h4>Entry Permits</h4>
+                <div class="services-list">
+                    <div class="service-item" onclick="openServiceForm('EP0101')">
+                        <div class="service-header">
+                            <h5>New Entry Permit for Son or Daughter</h5>
+                            <span class="service-code">EP0101</span>
+                        </div>
+                        <p>Sponsor (Investor or Partner-dxb residence Visa holder)</p>
+                        <div class="service-meta">
+                            <span class="duration">3-Days</span>
+                            <span class="type">New</span>
+                            <span class="category">Son-Daughter</span>
+                            <button class="apply-btn">Apply</button>
+                        </div>
+                    </div>
+
+                    <div class="service-item" onclick="openServiceForm('EP0102')">
+                        <div class="service-header">
+                            <h5>New Entry Permit for Son or Daughter</h5>
+                            <span class="service-code">EP0102</span>
+                        </div>
+                        <p>Sponsor (working in Govt. Sector- dxb res. Visa holder)</p>
+                        <div class="service-meta">
+                            <span class="duration">3-Days</span>
+                            <span class="type">New</span>
+                            <span class="category">Son-Daughter</span>
+                            <button class="apply-btn">Apply</button>
+                        </div>
+                    </div>
+
+                    <div class="service-item" onclick="openServiceForm('EP0103')">
+                        <div class="service-header">
+                            <h5>New Entry Permit for Son or Daughter</h5>
+                            <span class="service-code">EP0103</span>
+                        </div>
+                        <p>Sponsor (working in Private sector or free zone DXB res. visa holder)</p>
+                        <div class="service-meta">
+                            <span class="duration">3-Days</span>
+                            <span class="type">New</span>
+                            <span class="category">Son-Daughter</span>
+                            <button class="apply-btn">Apply</button>
+                        </div>
+                    </div>
+
+                    <div class="service-item" onclick="openServiceForm('EP0104')">
+                        <div class="service-header">
+                            <h5>New Entry Permit for Son or Daughter</h5>
+                            <span class="service-code">EP0104</span>
+                        </div>
+                        <p>Sponsor is UAE citizen</p>
+                        <div class="service-meta">
+                            <span class="duration">3-Days</span>
+                            <span class="type">New</span>
+                            <span class="category">Son-Daughter</span>
+                            <button class="apply-btn">Apply</button>
+                        </div>
+                    </div>
+
+                    <div class="service-item" onclick="openServiceForm('EP0105')">
+                        <div class="service-header">
+                            <h5>New Entry Permit for Wife</h5>
+                            <span class="service-code">EP0105</span>
+                        </div>
+                        <p>Sponsor (Investor or Partner- dxb residence. Visa holder)</p>
+                        <div class="service-meta">
+                            <span class="duration">1-Week</span>
+                            <span class="type">New</span>
+                            <span class="category">Wife</span>
+                            <button class="apply-btn">Apply</button>
+                        </div>
+                    </div>
+
+                    <div class="service-item" onclick="openServiceForm('EP0106')">
+                        <div class="service-header">
+                            <h5>New Entry Permit for Wife</h5>
+                            <span class="service-code">EP0106</span>
+                        </div>
+                        <p>Sponsor working in Government Sector</p>
+                        <div class="service-meta">
+                            <span class="duration">1-Week</span>
+                            <span class="type">New</span>
+                            <span class="category">Wife</span>
+                            <button class="apply-btn">Apply</button>
+                        </div>
+                    </div>
+
+                    <div class="service-item" onclick="openServiceForm('EP0107')">
+                        <div class="service-header">
+                            <h5>New Entry Permit for Wife</h5>
+                            <span class="service-code">EP0107</span>
+                        </div>
+                        <p>Sponsor (working in private sector or free zone-dxb res. Visa holder)</p>
+                        <div class="service-meta">
+                            <span class="duration">1-Week</span>
+                            <span class="type">New</span>
+                            <span class="category">Wife</span>
+                            <button class="apply-btn">Apply</button>
+                        </div>
+                    </div>
+
+                    <div class="service-item" onclick="openServiceForm('EP0108')">
+                        <div class="service-header">
+                            <h5>New Entry Permit for Wife</h5>
+                            <span class="service-code">EP0108</span>
+                        </div>
+                        <p>Sponsor is UAE citizen</p>
+                        <div class="service-meta">
+                            <span class="duration">1-Week</span>
+                            <span class="type">New</span>
+                            <span class="category">Wife</span>
+                            <button class="apply-btn">Apply</button>
+                        </div>
+                    </div>
+
+                    <div class="service-item" onclick="openServiceForm('EP0109')">
+                        <div class="service-header">
+                            <h5>New Entry Permit for Parents</h5>
+                            <span class="service-code">EP0109</span>
+                        </div>
+                        <p>Sponsor (Investor or Partner -dxb res. Visa holder)</p>
+                        <div class="service-meta">
+                            <span class="duration">1-Week</span>
+                            <span class="type">New</span>
+                            <span class="category">Parents</span>
+                            <button class="apply-btn">Apply</button>
+                        </div>
+                    </div>
+
+                    <div class="service-item" onclick="openServiceForm('EP0110')">
+                        <div class="service-header">
+                            <h5>New Entry Permit for Parents</h5>
+                            <span class="service-code">EP0110</span>
+                        </div>
+                        <p>Sponsor (working in Government Sector-dxb res. Visa holder)</p>
+                        <div class="service-meta">
+                            <span class="duration">1-Week</span>
+                            <span class="type">New</span>
+                            <span class="category">Parents</span>
+                            <button class="apply-btn">Apply</button>
+                        </div>
+                    </div>
+
+                    <div class="service-item" onclick="openServiceForm('EP0111')">
+                        <div class="service-header">
+                            <h5>New Entry Permit for Parents</h5>
+                            <span class="service-code">EP0111</span>
+                        </div>
+                        <p>Sponsor (working in Private Sector or free zone –dxb residence. Visa holder)</p>
+                        <div class="service-meta">
+                            <span class="duration">1-Week</span>
+                            <span class="type">New</span>
+                            <span class="category">Parents</span>
+                            <button class="apply-btn">Apply</button>
+                        </div>
+                    </div>
+
+                    <div class="service-item" onclick="openServiceForm('EP0112')">
+                        <div class="service-header">
+                            <h5>New Entry Permit for Parents</h5>
+                            <span class="service-code">EP0112</span>
+                        </div>
+                        <p>Sponsor (UAE Citizen)</p>
+                        <div class="service-meta">
+                            <span class="duration">1-Week</span>
+                            <span class="type">New</span>
+                            <span class="category">Parents</span>
+                            <button class="apply-btn">Apply</button>
+                        </div>
+                    </div>
+
+                    <div class="service-item" onclick="openServiceForm('EP0113')">
+                        <div class="service-header">
+                            <h5>New Entry Permit for Partner & Investor</h5>
+                            <span class="service-code">EP0113</span>
+                        </div>
+                        <p>Partner & Investor Entry Permit</p>
+                        <div class="service-meta">
+                            <span class="duration">1-Week</span>
+                            <span class="type">New</span>
+                            <span class="category">Investor-or-Partner</span>
+                            <button class="apply-btn">Apply</button>
+                        </div>
+                    </div>
+
+                    <div class="service-item" onclick="openServiceForm('EP0114')">
+                        <div class="service-header">
+                            <h5>Cancellation – Entry Permit (After Entry)</h5>
+                            <span class="service-code">EP0114</span>
+                        </div>
+                        <p>Family Entry Permit Cancellation</p>
+                        <div class="service-meta">
+                            <span class="duration">1-Day</span>
+                            <span class="type">Cancellation</span>
+                            <span class="category">Family</span>
+                            <button class="apply-btn">Apply</button>
+                        </div>
+                    </div>
+
+                    <div class="service-item" onclick="openServiceForm('EP0115')">
+                        <div class="service-header">
+                            <h5>Cancellation – Entry Permit (After Entry)</h5>
+                            <span class="service-code">EP0115</span>
+                        </div>
+                        <p>Company Entry Permit Cancellation</p>
+                        <div class="service-meta">
+                            <span class="duration">1-Day</span>
+                            <span class="type">Cancellation</span>
+                            <span class="category">Company</span>
+                            <button class="apply-btn">Apply</button>
+                        </div>
+                    </div>
+
+                    <div class="service-item" onclick="openServiceForm('EP0116')">
+                        <div class="service-header">
+                            <h5>New Entry Permit for Husband</h5>
+                            <span class="service-code">EP0116</span>
+                        </div>
+                        <p>Sponsor (working in the private sector or free zone - dxb residence. Visa holder)</p>
+                        <div class="service-meta">
+                            <span class="duration">1-Week</span>
+                            <span class="type">New</span>
+                            <span class="category">Husband</span>
+                            <button class="apply-btn">Apply</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Residency Services -->
+            <div id="residency-services" class="service-category">
+                <h4>Residency Services</h4>
+                <div class="services-list">
+                    <div class="service-item" onclick="openServiceForm('RS0201')">
+                        <div class="service-header">
+                            <h5>Residence Visa Renewal 3 Years</h5>
+                            <span class="service-code">RS0201</span>
+                        </div>
+                        <p>For wife or Children /Sponsor (Investor or Partner -dxb res. Visa holder)</p>
+                        <div class="service-meta">
+                            <span class="duration">1-Week</span>
+                            <span class="type">Renewal</span>
+                            <span class="category">Wife</span>
+                            <button class="apply-btn">Apply</button>
+                        </div>
+                    </div>
+
+                    <div class="service-item" onclick="openServiceForm('RS0202')">
+                        <div class="service-header">
+                            <h5>Residence Visa Renewal 3 Years</h5>
+                            <span class="service-code">RS0202</span>
+                        </div>
+                        <p>For wife or Children /Sponsor (working in Govt. Sector or Free zone –dxb residence. Visa holder)</p>
+                        <div class="service-meta">
+                            <span class="duration">1-Week</span>
+                            <span class="type">Renewal</span>
+                            <span class="category">Wife, Son-Daughter</span>
+                            <button class="apply-btn">Apply</button>
+                        </div>
+                    </div>
+
+                    <div class="service-item" onclick="openServiceForm('RS0203')">
+                        <div class="service-header">
+                            <h5>Residence Visa Renewal 2 Years</h5>
+                            <span class="service-code">RS0203</span>
+                        </div>
+                        <p>For wife or Children /Sponsor (working in the private sector or Free zone–dxb residence. Visa holder)</p>
+                        <div class="service-meta">
+                            <span class="duration">1-Week</span>
+                            <span class="type">Renewal</span>
+                            <span class="category">Wife, Son-Daughter</span>
+                            <button class="apply-btn">Apply</button>
+                        </div>
+                    </div>
+
+                    <!-- Continue with more residency services... -->
+                    <div class="service-item" onclick="openServiceForm('RS0204')">
+                        <div class="service-header">
+                            <h5>Residence Visa Renewal for Son above 18</h5>
+                            <span class="service-code">RS0204</span>
+                        </div>
+                        <p>Sponsor (Investor or Partner -dxb residence. Visa holder)</p>
+                        <div class="service-meta">
+                            <span class="duration">1-Week</span>
+                            <span class="type">Renewal</span>
+                            <span class="category">Son-above-18</span>
+                            <button class="apply-btn">Apply</button>
+                        </div>
+                    </div>
+
+                    <div class="service-item" onclick="openServiceForm('RS0212')">
+                        <div class="service-header">
+                            <h5>Newborn Residence Visa</h5>
+                            <span class="service-code">RS0212</span>
+                        </div>
+                        <p>Sponsor (Investor or Partner -dxb residence Visa holder)</p>
+                        <div class="service-meta">
+                            <span class="duration">1-Week</span>
+                            <span class="type">New</span>
+                            <span class="category">Newborn</span>
+                            <button class="apply-btn">Apply</button>
+                        </div>
+                    </div>
+
+                    <div class="service-item" onclick="openServiceForm('RS0217')">
+                        <div class="service-header">
+                            <h5>Change Status / Family</h5>
+                            <span class="service-code">RS0217</span>
+                        </div>
+                        <p>Family Status Change Service</p>
+                        <div class="service-meta">
+                            <span class="duration">1-Week</span>
+                            <span class="type">New</span>
+                            <span class="category">Any</span>
+                            <button class="apply-btn">Apply</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Emirates ID -->
+            <div id="emirates-id" class="service-category">
+                <h4>Emirates ID Services</h4>
+                <div class="services-list">
+                    <div class="service-item" onclick="openServiceForm('EI0601')">
+                        <div class="service-header">
+                            <h5>Newborn / 1 Year Emirates ID</h5>
+                            <span class="service-code">EI0601</span>
+                        </div>
+                        <p>Emirates ID for newborn (1 Year validity)</p>
+                        <div class="service-meta">
+                            <span class="duration">1-Week</span>
+                            <span class="type">Newborn</span>
+                            <span class="category">1-Year-VISA</span>
+                            <button class="apply-btn">Apply</button>
+                        </div>
+                    </div>
+
+                    <div class="service-item" onclick="openServiceForm('EI0602')">
+                        <div class="service-header">
+                            <h5>New Residency (First time) / 1 Year Emirates ID</h5>
+                            <span class="service-code">EI0602</span>
+                        </div>
+                        <p>First time visiting UAE (1 Year validity)</p>
+                        <div class="service-meta">
+                            <span class="duration">1-Week</span>
+                            <span class="type">New-Residency</span>
+                            <span class="category">1-Year-VISA</span>
+                            <button class="apply-btn">Apply</button>
+                        </div>
+                    </div>
+
+                    <div class="service-item" onclick="openServiceForm('EI0612')">
+                        <div class="service-header">
+                            <h5>New Residency (First time) / 3 Year Emirates ID</h5>
+                            <span class="service-code">EI0612</span>
+                        </div>
+                        <p>First time visiting UAE (3 Year validity)</p>
+                        <div class="service-meta">
+                            <span class="duration">1-Week</span>
+                            <span class="type">New-Residency</span>
+                            <span class="category">3-Years-VISA</span>
+                            <button class="apply-btn">Apply</button>
+                        </div>
+                    </div>
+
+                    <div class="service-item" onclick="openServiceForm('EI0614')">
+                        <div class="service-header">
+                            <h5>Emirates ID Renewal / 3 Year</h5>
+                            <span class="service-code">EI0614</span>
+                        </div>
+                        <p>Emirates ID Renewal (3 Year validity)</p>
+                        <div class="service-meta">
+                            <span class="duration">1-Week</span>
+                            <span class="type">Renewal</span>
+                            <span class="category">3-Years-VISA</span>
+                            <button class="apply-btn">Apply</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Medical Examination -->
+            <div id="medical" class="service-category">
+                <h4>Medical Examination Services</h4>
+                <div class="services-list">
+                    <div class="service-item" onclick="openServiceForm('M0701')">
+                        <div class="service-header">
+                            <h5>New Entry – Normal 5 to 6 Days Medical</h5>
+                            <span class="service-code">M0701</span>
+                        </div>
+                        <p>Standard medical examination for new entry</p>
+                        <div class="service-meta">
+                            <span class="duration">Normal</span>
+                            <span class="type">New-Entry</span>
+                            <span class="price">AED 382.50</span>
+                            <button class="apply-btn">Apply</button>
+                        </div>
+                    </div>
+
+                    <div class="service-item" onclick="openServiceForm('M0702')">
+                        <div class="service-header">
+                            <h5>New Entry – Urgent 48 Hours</h5>
+                            <span class="service-code">M0702</span>
+                        </div>
+                        <p>Urgent medical examination for new entry (48 hours)</p>
+                        <div class="service-meta">
+                            <span class="duration">Urgent-48h</span>
+                            <span class="type">New-Entry</span>
+                            <span class="price">AED 492.50</span>
+                            <button class="apply-btn">Apply</button>
+                        </div>
+                    </div>
+
+                    <div class="service-item" onclick="openServiceForm('M0703')">
+                        <div class="service-header">
+                            <h5>New Entry – Urgent 24 Hours</h5>
+                            <span class="service-code">M0703</span>
+                        </div>
+                        <p>Express medical examination for new entry (24 hours)</p>
+                        <div class="service-meta">
+                            <span class="duration">Urgent-24h</span>
+                            <span class="type">New-Entry</span>
+                            <span class="price">AED 592.50</span>
+                            <button class="apply-btn">Apply</button>
+                        </div>
+                    </div>
+
+                    <div class="service-item" onclick="openServiceForm('M0704')">
+                        <div class="service-header">
+                            <h5>New Entry – VIP</h5>
+                            <span class="service-code">M0704</span>
+                        </div>
+                        <p>VIP medical examination service for new entry</p>
+                        <div class="service-meta">
+                            <span class="duration">VIP</span>
+                            <span class="type">New-Entry</span>
+                            <span class="price">AED 810.50</span>
+                            <button class="apply-btn">Apply</button>
+                        </div>
+                    </div>
+
+                    <div class="service-item" onclick="openServiceForm('M0705')">
+                        <div class="service-header">
+                            <h5>Residency Renewal – Normal 5 to 6 Days</h5>
+                            <span class="service-code">M0705</span>
+                        </div>
+                        <p>Standard medical examination for residency renewal</p>
+                        <div class="service-meta">
+                            <span class="duration">Normal</span>
+                            <span class="type">Residency-Renewal</span>
+                            <span class="price">AED 382.50</span>
+                            <button class="apply-btn">Apply</button>
+                        </div>
+                    </div>
+
+                    <div class="service-item" onclick="openServiceForm('M0708')">
+                        <div class="service-header">
+                            <h5>Residency Renewal – VIP</h5>
+                            <span class="service-code">M0708</span>
+                        </div>
+                        <p>VIP medical examination for residency renewal</p>
+                        <div class="service-meta">
+                            <span class="duration">VIP</span>
+                            <span class="type">Residency-Renewal</span>
+                            <span class="price">AED 810.50</span>
+                            <button class="apply-btn">Apply</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Establishments Services -->
+            <div id="establishments" class="service-category">
+                <h4>Establishments Services</h4>
+                <div class="services-list">
+                    <div class="service-item" onclick="openServiceForm('EST001')">
+                        <div class="service-header">
+                            <h5>Business License Application</h5>
+                            <span class="service-code">EST001</span>
+                        </div>
+                        <p>New business license application and processing</p>
+                        <div class="service-meta">
+                            <span class="duration">2-Weeks</span>
+                            <span class="type">New</span>
+                            <span class="category">Business</span>
+                            <button class="apply-btn">Apply</button>
+                        </div>
+                    </div>
+
+                    <div class="service-item" onclick="openServiceForm('EST002')">
+                        <div class="service-header">
+                            <h5>Trade License Renewal</h5>
+                            <span class="service-code">EST002</span>
+                        </div>
+                        <p>Annual trade license renewal service</p>
+                        <div class="service-meta">
+                            <span class="duration">1-Week</span>
+                            <span class="type">Renewal</span>
+                            <span class="category">Business</span>
+                            <button class="apply-btn">Apply</button>
+                        </div>
+                    </div>
+
+                    <div class="service-item" onclick="openServiceForm('EST003')">
+                        <div class="service-header">
+                            <h5>Establishment Card</h5>
+                            <span class="service-code">EST003</span>
+                        </div>
+                        <p>New establishment card application</p>
+                        <div class="service-meta">
+                            <span class="duration">1-Week</span>
+                            <span class="type">New</span>
+                            <span class="category">Establishment</span>
+                            <button class="apply-btn">Apply</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog-section" id="blog" style="display: none;">
+        <div class="container">
+            <div class="blog-header">
+                <h3>📝 Latest Blog Posts</h3>
+                <p>Stay updated with the latest news and insights about document clearing services in UAE</p>
+                <div style="text-align: center; margin-bottom: 2rem;">
+                    <button class="btn btn-secondary" onclick="hideBlogSection()">← Back to Home</button>
+                </div>
+            </div>
+            
+            <div class="blog-container">
+                <div id="blogPosts" class="blog-posts">
+                    <div class="no-data">Loading blog posts...</div>
+                </div>
+                
+                <!-- Load More Button -->
+                <div class="blog-actions" style="text-align: center; margin-top: 2rem;">
+                    <button class="btn btn-primary" onclick="loadMoreBlogs()" id="loadMoreBtn" style="display: none;">Load More Posts</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Blog Section -->
+    <section class="featured-blog">
+        <div class="container">
+            <div class="section-header">
+                <h3>📝 Featured Posts</h3>
+                <p>Latest insights and updates from Bluemark</p>
+                <button class="btn btn-secondary" onclick="showBlogSection()">View All Posts</button>
+            </div>
+            <div id="featuredPosts" class="featured-posts-grid">
+                <div class="no-data">Loading featured posts...</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+<section class="partners">
+    <div class="container">
+        <h3>Our Partners</h3>
+        <div class="partners-grid">
+            <div class="partner-logo">
+                <img src="assets/amer_center.png" alt="Amer Center" />
+            </div>
+            <div class="partner-logo">
+                <img src="assets/dubai_economy.png" alt="Dubai Economy" />
+            </div>
+            <div class="partner-logo">
+                <img src="assets/federal.png" alt="Federal" />
+            </div>
+            <div class="partner-logo">
+                <img src="assets/Dubai Health Authority.png" alt="Dubai Health Authority" />
+            </div>
+            <div class="partner-logo">
+                <img src="assets/Tasheel_Centre.png" alt="Tasheel Centre" />
+            </div>
+            <div class="partner-logo">
+                <img src="assets/Dubai _Court.jpg" alt="Dubai Court" />
+            </div>
+            <div class="partner-logo">
+                <img src="assets/dubai_immiigration.jpg" alt="Dubai Immigration" />
+            </div>
+            <div class="partner-logo">
+                <img src="assets/uae_mohre.jpg" alt="UAE MOHRE" />
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Mailing List -->
+    <section class="mailing-list">
+        <div class="container">
+            <h3>Join Our Mailing List</h3>
+            <p>Stay updated with the latest visa requirements and services</p>
+            <div class="mailing-form">
+                <input type="email" id="mailingEmail" placeholder="Enter your email">
+                <button class="btn btn-primary" onclick="subscribeToMailing()">Subscribe</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-form">
+        <div class="container">
+            <h3>Contact Us</h3>
+            <form onsubmit="submitContactForm(event)">
+                <input type="text" id="contactName" placeholder="Your Name" required>
+                <input type="email" id="contactEmail" placeholder="Your Email" required>
+                <input type="tel" id="contactPhone" placeholder="Your Phone">
+                <textarea id="contactMessage" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Service Application Modal -->
+    <div id="serviceModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeServiceModal()">&times;</span>
+            <h3 id="serviceTitle">Service Application</h3>
+            <form id="serviceForm" onsubmit="submitServiceForm(event)">
+                <div class="form-section">
+                    <h4>Applicant/Sponsorship Details</h4>
+                    <input type="text" id="fullName" placeholder="Full Name of Applicant" required>
+                    <input type="email" id="applicantEmail" placeholder="Applicant Email Address" required>
+                    <input type="tel" id="whatsappNumber" placeholder="WhatsApp Number" required>
+                    <input type="text" id="ibanNumber" placeholder="Account IBAN Number" required>
+                    
+                    <!-- Golden Visa specific fields -->
+                    <div id="goldenVisaFields" style="display: none;">
+                        <select id="goldenVisaType" required>
+                            <option value="">Select Golden Visa Type</option>
+                            <option value="commercial-investor">Commercial Investor</option>
+                            <option value="investment-fund">Investor in Investment Fund</option>
+                            <option value="engineer">Engineer</option>
+                            <option value="creative-culture">Creative People in Culture and Art</option>
+                            <option value="executive-directors">Executive Directors</option>
+                            <option value="outstanding-students">Outstanding Students</option>
+                            <option value="inventors">Inventors</option>
+                            <option value="entrepreneurs">Entrepreneurs</option>
+                            <option value="retired-foreigners">Retired Foreigners</option>
+                            <option value="scientists">Scientists</option>
+                            <option value="athletes">Athletes</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h4>Required Documents</h4>
+                    <div class="file-upload">
+                        <label for="passportCopy">Passport Copy *</label>
+                        <input type="file" id="passportCopy" accept="image/*" required>
+                    </div>
+                    <div class="file-upload">
+                        <label for="personalPhoto">Personal Photo *</label>
+                        <input type="file" id="personalPhoto" accept="image/*" required>
+                    </div>
+                    <div class="file-upload">
+                        <label for="emiratesId">Emirates ID *</label>
+                        <input type="file" id="emiratesId" accept="image/*" required>
+                    </div>
+                    <div class="file-upload">
+                        <label for="residencyVisa">Residency Visa *</label>
+                        <input type="file" id="residencyVisa" accept="image/*" required>
+                    </div>
+                    <div class="file-upload">
+                        <label for="birthCertificate">Birth Certificate</label>
+                        <input type="file" id="birthCertificate" accept="image/*">
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit Application</button>
+            </form>
+        </div>
+    </div>
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo-icon">🏢</div>
+                    <div class="logo-text">
+                        <h4>Bluemark</h4>
+                        <p>Documents Clearing Service</p>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#services">Services</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Bluemark Documents Clearing Service. All rights reserved.</p>
+                <div style="margin-top: 10px;">
+                    <a href="admin.html" style="color: #666; text-decoration: none; font-size: 0.8rem; opacity: 0.7;">Admin</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
