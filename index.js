@@ -941,10 +941,85 @@ function convertFileToBase64(file) {
     });
 }
 
+// Banner Carousel Functions
+let currentSlide = 0;
+let bannerInterval;
+
+function initBannerCarousel() {
+    const slides = document.querySelectorAll('.banner-slide');
+    const indicators = document.querySelectorAll('.indicator');
+    
+    if (slides.length === 0) return;
+    
+    // Start auto-rotation
+    startBannerAutoRotation();
+    
+    // Add click handlers to indicators
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+            goToSlide(index);
+        });
+    });
+    
+    // Pause on hover
+    const bannerCarousel = document.querySelector('.banner-carousel');
+    if (bannerCarousel) {
+        bannerCarousel.addEventListener('mouseenter', stopBannerAutoRotation);
+        bannerCarousel.addEventListener('mouseleave', startBannerAutoRotation);
+    }
+}
+
+function goToSlide(slideIndex) {
+    const slides = document.querySelectorAll('.banner-slide');
+    const indicators = document.querySelectorAll('.indicator');
+    
+    if (slides.length === 0) return;
+    
+    // Remove active class from current slide and indicator
+    slides[currentSlide].classList.remove('active');
+    indicators[currentSlide].classList.remove('active');
+    
+    // Update current slide
+    currentSlide = slideIndex;
+    
+    // Add active class to new slide and indicator
+    slides[currentSlide].classList.add('active');
+    indicators[currentSlide].classList.add('active');
+}
+
+function nextSlide() {
+    const slides = document.querySelectorAll('.banner-slide');
+    if (slides.length === 0) return;
+    
+    const nextIndex = (currentSlide + 1) % slides.length;
+    goToSlide(nextIndex);
+}
+
+function prevSlide() {
+    const slides = document.querySelectorAll('.banner-slide');
+    if (slides.length === 0) return;
+    
+    const prevIndex = currentSlide === 0 ? slides.length - 1 : currentSlide - 1;
+    goToSlide(prevIndex);
+}
+
+function startBannerAutoRotation() {
+    stopBannerAutoRotation(); // Clear any existing interval
+    bannerInterval = setInterval(nextSlide, 3000); // Change slide every 2 seconds
+}
+
+function stopBannerAutoRotation() {
+    if (bannerInterval) {
+        clearInterval(bannerInterval);
+        bannerInterval = null;
+    }
+}
+
 // Initialize lazy loading when DOM is ready
 document.addEventListener('DOMContentLoaded', function() {
     lazyLoadImages();
     loadFeaturedPosts(); // Load featured posts on page load
+    initBannerCarousel(); // Initialize banner carousel
 });
 
 // Service Worker for PWA (optional - for even faster loading)
