@@ -840,13 +840,23 @@
     <section class="contact-form">
         <div class="container">
             <h3>Contact Us</h3>
-            <form onsubmit="submitContactForm(event)">
-                <input type="text" id="contactName" placeholder="Your Name" required>
-                <input type="email" id="contactEmail" placeholder="Your Email" required>
-                <input type="tel" id="contactPhone" placeholder="Your Phone">
-                <textarea id="contactMessage" placeholder="Your Message" required></textarea>
-                <button type="submit" class="btn btn-primary">Send Message</button>
-            </form>
+            <div class="form-container">
+                <form onsubmit="submitContactForm(event)">
+                    <div class="form-group">
+                        <input type="text" id="contactName" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="contactEmail" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="contactPhone" placeholder="Your Phone">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="contactMessage" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
         </div>
     </section>
 
@@ -918,7 +928,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <div class="logo-icon">🏢</div>
+                   
                     <div class="logo-text">
                         <h4>Bluemark</h4>
                         <p>Documents Clearing Service</p>

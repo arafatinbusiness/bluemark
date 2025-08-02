@@ -3116,6 +3116,77 @@ body {
     background: #16a34a;
 }
 
+/* Mobile Contact Form Styles */
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 3rem 0;
+    }
+    
+    .contact-form h3 {
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+    }
+    
+    .form-container {
+        padding: 1.5rem;
+        margin: 0 1rem;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 14px;
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+    
+    .form-group textarea {
+        min-height: 100px;
+    }
+    
+    .submit-btn {
+        padding: 14px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-form {
+        padding: 2rem 0;
+    }
+    
+    .contact-form h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .form-container {
+        padding: 1rem;
+        margin: 0 0.5rem;
+        border-radius: 8px;
+    }
+    
+    .form-group {
+        margin-bottom: 1rem;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 12px;
+        font-size: 16px;
+        border-radius: 6px;
+    }
+    
+    .form-group textarea {
+        min-height: 80px;
+    }
+    
+    .submit-btn {
+        padding: 12px;
+        border-radius: 6px;
+    }
+}
+
 /* Mailing List */
 .mailing-list {
     padding: 4rem 0;
