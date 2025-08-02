@@ -15,10 +15,10 @@ const db = firebase.firestore();
 
 // Company Contact Information
 const COMPANY_INFO = {
-    phone: "+971501234567",
-    whatsapp: "+971501234567",
-    location: "25.2048,55.2708", // Dubai coordinates
-    address: "Business Bay, Dubai, UAE"
+    phone: "+971566229773",
+    whatsapp: "+971566229773",
+    location: "25.2600,55.3029", // Al Rigga, Deira, Dubai coordinates
+    address: "Office: 304 Al Hawai Building, Al Rigga Road, Deira, Dubai, UAE"
 };
 
 // Side Menu Functions
